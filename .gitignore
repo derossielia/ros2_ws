@@ -1,0 +1,24 @@
+# ========================================== # ROS 2 &amp; Colcon Build Directories # ========================================== 
+build/ 
+install/ 
+log/ 
+# ========================================== # Python Compiled Files &amp; Environments # ========================================== 
+__pycache__/ 
+*.pyc 
+*.pyo 
+*.pyd 
+*.egg-info/ 
+.pytest_cache/ 
+.venv/ 
+venv/ 
+# ========================================== # IDE &amp; Text Editor Configuration Files # ========================================== 
+.vscode/ 
+.idea/ 
+*.swp 
+*.swo 
+*~ 
+.DS_Store 
+# ========================================== # Temporary Archives &amp; User Files # ========================================== 
+*.zip 
+*.tar.gz
+*.user

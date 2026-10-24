@@ -1,0 +1,6 @@
+geometry_msgs/Point current_position
+geometry_msgs/Point target_position
+float64 tolerance
+---
+float64 distance
+bool reached
