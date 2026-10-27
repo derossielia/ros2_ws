@@ -9,7 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(check_target_int REQUIRED)
-find_package(geometry_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,5 +21,16 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+add_executable(target_server src/target_server.cpp)
+ament_target_dependencies(target_server rclcpp check_target_int)
+
+add_executable(target_client src/target_client.cpp)
+ament_target_dependencies(target_client rclcpp check_target_int)
+
+install(TARGETS
+  target_server
+  target_client
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
